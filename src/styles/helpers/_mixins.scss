@@ -1,16 +1,16 @@
 @use "sass:math";
 
 //Подключение шрифта
-@mixin font($font_name, $file_name, $weight, $style) {
-  @font-face {
-    font-family: $font_name;
-    font-display: swap;
-    src: url("../fonts/#{$file_name}.woff2") format("woff2"),
-    url("../fonts/#{$file_name}.woff") format("woff");
-    font-weight: #{$weight};
-    font-style: #{$style};
-  }
-}
+// @mixin font($font_name, $file_name, $weight, $style) {
+//   @font-face {
+//     font-family: $font_name;
+//     font-display: swap;
+//     src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+//     url("../fonts/#{$file_name}.woff") format("woff");
+//     font-weight: #{$weight};
+//     font-style: #{$style};
+//   }
+// }
 
 //Percent
 @function percent($px, $from) {
@@ -108,4 +108,19 @@
       #{$property}: inherit;
     }
   }
+}
+
+@mixin f400 {
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+@mixin f500 {
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+@mixin f600 {
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
 }
