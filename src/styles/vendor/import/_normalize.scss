@@ -8,10 +8,12 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-// html {
-// 	line-height: 1.15; /* 1 */
-// 	-webkit-text-size-adjust: 100%; /* 2 */
-// }
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
 
 /* Sections
    ========================================================================== */
@@ -20,27 +22,27 @@
  * Remove the margin in all browsers.
  */
 
-// body {
-//   margin: 0;
-// }
+body {
+  margin: 0;
+}
 
 /**
  * Render the `main` element consistently in IE.
  */
 
-// main {
-//   display: block;
-// }
+main {
+  display: block;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-// h1 {
-//   font-size: 2em;
-//   margin: 0.67em 0;
-// }
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -187,22 +189,22 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 
-// button,
-// input {
-//   /* 1 */
-//   overflow: visible;
-// }
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
 
-// button,
-// select {
-//   /* 1 */
-//   text-transform: none;
-// }
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.

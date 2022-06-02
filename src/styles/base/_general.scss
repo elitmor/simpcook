@@ -1,166 +1,24 @@
-@use "sass:math";
-
-$fontFamily: Poppins;
-$fontSize: rem(14);
-$mainColor: #000;
-$minWidth: 320;
-$maxWidth: 1920;
-$maxWidthContainer: 1170;
-$containerPadding: 30;
-$containerWidth: $maxWidthContainer+$containerPadding;
-$pc: em($containerWidth);
-$tablet: em(991.98);
-$mobile: em(767.98);
-$mobileSmall: em(479.98);
-$responsiveType: 1;
-
-.wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-
-  >main {
-    flex: 1 1 auto;
-  }
-
-  >* {
-    min-width: 0;
-  }
-}
-
-@if ($responsiveType==1) {
-
-  // Отзывчивая
-  [class*="__container"] {
-    @if ($maxWidthContainer>0) {
-      max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
-      margin: 0 auto;
-    }
-
-    @if ($containerPadding>0) {
-      padding: 0 rem(math.div($containerPadding, 2));
-    }
-  }
-}
-
-@else {
-
-  // По брейк-поинтам
-  [class*="__container"] {
-    margin: 0 auto;
-
-    @if ($maxWidthContainer>0) {
-      max-width: rem($maxWidthContainer);
-      box-sizing: content-box;
-    }
-
-    @else {
-      @if ($containerPadding>0) {
-        padding: 0 rem(math.div($containerPadding, 2));
-      }
-    }
-
-    @media (max-width: $pc) {
-      max-width: rem(970);
-    }
-
-    @media (max-width: $tablet) {
-      max-width: rem(750);
-    }
-
-    @media (max-width: $mobile) {
-      max-width: none;
-
-      @if ($containerPadding>0 and $maxWidthContainer>0) {
-        padding: 0 rem(math.div($containerPadding, 2));
-      }
-    }
-  }
-}
-
-* {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-// :focus,
-// :active {
-//   outline: none;
-// }
-
-// a:focus,
-// a:active {
-//   outline: none;
-// }
-
-html,
-body {
-  height: 100%;
-  min-width: $minWidth + px;
-}
-
-body {
-  color: $mainColor;
-  line-height: 1;
-  font-family: $fontFamily;
-  font-size: $fontSize;
-  //text-rendering: optimizeLegibility;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-input,
-button,
-textarea {
-  font-family: $fontFamily;
-  font-size: inherit;
-}
-
-button {
-  cursor: pointer;
-  color: inherit;
-  background-color: inherit;
-}
-
-a {
-  color: inherit;
-}
-
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-weight: inherit;
-  font-size: inherit;
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  @include f400;
+  color: $grey;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+
+[class*="__container"] {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 0 15px;
 }

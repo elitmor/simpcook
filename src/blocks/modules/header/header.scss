@@ -1,59 +1,54 @@
-.header {
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  &:not(:last-child) {
+    margin-right: 55px;
+  }
+}
+
+.nav__link {
+  font-size: 20px;
+  line-height: 30px;
+  background-image: linear-gradient(to right,
+      $orange,
+      $orange 50%,
+      #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+  &::before {
+    content: '';
+    background: $orange;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
   }
 
-  .nav {
-    &__list {
-      display: flex;
-    }
+  &:hover {
+    background-position: 0;
 
-    &__item {
-      &:not(:last-child) {
-        margin-right: 55px;
-      }
-    }
-
-    &__link {
-      font-size: 20px;
-      line-height: 30px;
-      letter-spacing: 0.02em;
-      background-image: linear-gradient(to right,
-          $orange,
-          $orange 50%,
-          #000 50%);
-      background-size: 200% 100%;
-      background-position: -100%;
-      display: inline-block;
-      padding: 5px 0;
-      position: relative;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      transition: all 0.3s ease-in-out;
-
-      &::before {
-        content: '';
-        background: $orange;
-        display: block;
-        position: absolute;
-        bottom: -3px;
-        left: 0;
-        width: 0;
-        height: 3px;
-        transition: all 0.3s ease-in-out;
-      }
-
-      &:hover {
-        background-position: 0;
-
-        &::before {
-          width: 100%;
-        }
-      }
+    &::before {
+      width: 100%;
     }
   }
 }
