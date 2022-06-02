@@ -22,3 +22,11 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.title_fz38 {
+  @include f600;
+  font-size: 38px;
+  line-height: calc(57 / 38 * 100%);
+  letter-spacing: 0.035em;
+  color: $black;
+}

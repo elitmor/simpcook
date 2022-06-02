@@ -1,0 +1,72 @@
+.preview-menu__inner {
+  margin-top: 50px;
+}
+
+.tabs__items {
+  display: inline-block;
+  border-left: 5px solid $orange;
+}
+
+.tabs__item {
+  transition: .3s all;
+  margin: 15px;
+  cursor: pointer;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+.tabs__item_active {
+  color: $orange;
+}
+
+.tabs__content {
+  position: relative;
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+.tabs__content img {
+  max-width: 1200px;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+.tabs__text {
+  position: absolute;
+  bottom: 0;
+  color: $white;
+  background-color: $grey;
+  opacity: .7;
+  overflow: hidden;
+  max-width: 1200px;
+  transition: .3s all;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.show {
+  display: block
+}
+
+.hide {
+  display: none
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
