@@ -1,0 +1,95 @@
+.footer {
+  background: $green;
+  padding-top: 80px;
+  color: $white;
+}
+
+.body-footer {
+  display: flex;
+  gap: 50px;
+}
+
+.body-footer__column_full {
+  flex: 1 1 auto;
+}
+
+.body-footer__logo {
+  display: inline-block;
+}
+
+.body-footer__logo:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.contacts-footer__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.contacts-footer__link {
+  color: $white;
+  display: inline-block;
+  font-size: 18px;
+  line-height: calc(27 / 18 * 100%);
+  padding-left: 40px;
+  transition: all .3s;
+}
+
+.contacts-footer__link:hover {
+  color: $orange;
+}
+
+.contacts-footer__link_mail {
+  background: url('../img/footer/sms.svg') left no-repeat;
+}
+
+.contacts-footer__link_location {
+  background: url('../img/footer/location.svg') left no-repeat;
+}
+
+.menu-footer {
+  display: flex;
+  gap: 120px;
+  justify-content: center;
+}
+
+.menu-footer__title {
+  @include f600;
+  font-size: 24px;
+  line-height: calc(36 / 24 * 100%);
+  margin-bottom: 15px;
+}
+
+.menu-footer__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.menu-footer__link {
+  font-size: 18px;
+  color: $white;
+  transition: all .3s;
+}
+
+.menu-footer__link:hover {
+  color: $orange;
+}
+
+.social-footer__title {
+  @include f600;
+  font-size: 24px;
+  line-height: calc(36 / 24 * 100%);
+  margin-bottom: 15px;
+}
+
+.social-footer__items {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer__copy {
+  @include f600;
+  font-size: 24px;
+  line-height: calc(36 / 24 * 100%);
+  padding-top: 80px;
+  text-align: center;
+}
