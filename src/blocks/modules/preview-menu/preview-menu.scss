@@ -8,8 +8,13 @@
 }
 
 .tabs__item {
+  display: block;
+  font-size: 20px;
   transition: .3s all;
-  margin: 15px;
+  padding: 10px;
+  margin-left: 5px;
+  border: none;
+  background: transparent;
   cursor: pointer;
 
   &:hover {
@@ -31,6 +36,10 @@
   max-width: 1200px;
   object-fit: cover;
   vertical-align: bottom;
+
+  @include xxl {
+    max-width: 100%;
+  }
 }
 
 .tabs__text {
@@ -40,11 +49,16 @@
   background-color: $grey;
   opacity: .7;
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 100%;
+  width: 1200px;
   transition: .3s all;
 
   &:hover {
     opacity: 1;
+  }
+
+  @include sm {
+    font-size: 12px;
   }
 }
 

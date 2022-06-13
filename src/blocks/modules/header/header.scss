@@ -12,7 +12,7 @@
 .header__nav {
   @include sm {
     background: $white;
-    opacity: .9;
+    opacity: 1;
   }
 }
 
@@ -51,7 +51,6 @@
   background-size: 200% 100%;
   background-position: -100%;
   display: inline-block;
-  padding: 5px 0;
   position: relative;
   background-clip: text;
   -webkit-background-clip: text;
@@ -60,7 +59,12 @@
 
   @include sm {
     width: 100%;
-    font-size: 32px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    background-image: linear-gradient(to right,
+        $orange,
+        $orange 50%,
+        $orange 50%);
   }
 
   &::before {
@@ -115,11 +119,10 @@
 .header__nav {
   @include sm {
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 20px;
     transform: translateX(-100%);
     transition: transform .3s;
   }

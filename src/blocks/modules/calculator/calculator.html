@@ -1,0 +1,46 @@
+<div class="calculator">
+  <div class="calculator__container">
+    <h2 class="calculator__title title_fz38">Let&rsquo;s calculate your need for calories?
+    </h2>
+    <div class="calculator__field">
+      <div class="calculator__subtitle">
+        What&rsquo;s your gender
+      </div>
+      <div class="calculator__choose" id="gender">
+        <button id="female" class="calculator__choose-item calculator__choose-item_active">Female</button>
+        <button id="male" class="calculator__choose-item">Male</button>
+      </div>
+
+      <div class="calculator__subtitle">
+        Anthropometry
+      </div>
+      <div class="calculator__choose calculator__choose_medium">
+        <input type="text" id="height" placeholder="Enter height" class="calculator__choose-item">
+        <input type="text" id="weight" placeholder="Enter weight" class="calculator__choose-item">
+        <input type="text" id="age" placeholder="Enter age" class="calculator__choose-item">
+      </div>
+
+      <div class="calculator__subtitle">
+        Choose your physical activity
+      </div>
+      <div class="calculator__choose calculator__choose_big">
+        <button data-ratio="1.2" id="low" class="calculator__choose-item">Low activity</button>
+        <button data-ratio="1.375" id="small" class="calculator__choose-item calculator__choose-item_active">
+          Moderate activity</button>
+        <button data-ratio="1.55" id="medium" class="calculator__choose-item">High activity</button>
+        <button data-ratio="1.725" id="high" class="calculator__choose-item">Very high activity</button>
+      </div>
+
+      <div class="calculator__divider"></div>
+
+      <div class="calculator__total">
+        <div class="calculator__subtitle">
+          Your daily calorie intake:
+        </div>
+        <div class="calculator__result">
+          <span>2700</span> calories
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

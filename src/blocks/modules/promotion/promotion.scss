@@ -1,3 +1,11 @@
+.promotion {
+  margin-bottom: 30px;
+
+  @include xl {
+    text-align: center;
+  }
+}
+
 .promotion__title {
   margin-top: 50px;
 }
@@ -6,11 +14,19 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @include xl {
+    flex-wrap: wrap;
+  }
 }
 
 .promotion__info {
   flex: 0 1 50%;
   margin-right: 15px;
+
+  @include xl {
+    flex: 0 1 auto;
+  }
 }
 
 .info-promotion__title {
@@ -27,6 +43,11 @@
 
 .promotion__timer {
   flex: 0 1 50%;
+
+  @include xl {
+    flex: 1 1 auto;
+    margin-top: 20px;
+  }
 }
 
 .timer__header {
@@ -40,6 +61,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
+
+  @include xl {
+    margin-top: 30px;
+    justify-content: center;
+  }
 }
 
 .main-timer__block {
@@ -50,6 +77,12 @@
   border-radius: 20px;
   font-size: 16px;
   text-align: center;
+
+  @include sm {
+    width: 100%;
+    height: 100%;
+    min-width: 50px;
+  }
 
   span {
     display: block;

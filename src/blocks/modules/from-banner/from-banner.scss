@@ -1,17 +1,23 @@
-.from-banner {}
-
-.from-banner__container {}
-
 .from-banner__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 100px;
+
+  @include lg {
+    flex-direction: column;
+    margin-top: 20px;
+  }
 }
 
 .from-banner__info {
   flex: 0 1 50%;
   margin-right: 15px;
+
+  @include lg {
+    text-align: center;
+    margin-right: 0;
+  }
 }
 
 .info-banner__title {
@@ -21,6 +27,15 @@
   max-width: 620px;
   margin-bottom: 30px;
   color: $black;
+
+  @include xl {
+    font-size: 48px;
+  }
+
+  @include lg {
+    font-size: 40px;
+    max-width: 100%;
+  }
 }
 
 .info-banner__text {
@@ -28,21 +43,27 @@
   line-height: calc(24 / 16 * 100%);
   max-width: 465px;
   margin-bottom: 30px;
+
+  @include lg {
+    max-width: 100%;
+  }
 }
 
 .info-banner__social {
   margin: 15px;
 }
 
-.social {}
-
 .social__items {
   display: flex;
+  gap: 50px;
+
+  @include lg {
+    justify-content: center;
+  }
 }
 
 .social__link {
   position: relative;
-  margin-right: 50px;
 
   &::before {
     position: absolute;
@@ -70,7 +91,6 @@
 }
 
 .info-banner__btn {
-  display: inline-block;
   font-size: 24px;
   line-height: calc(36 / 24 * 100%);
   color: $white;
@@ -80,11 +100,16 @@
   padding: 10px;
   margin-top: 30px;
   cursor: pointer;
+  border: none;
   padding: 15px 50px;
   transition: all .3s;
 
   &:hover {
     background-color: $orange;
+  }
+
+  @include sm {
+    width: 100%;
   }
 }
 
@@ -93,5 +118,9 @@
 
   img {
     width: 100%;
+  }
+
+  @include lg {
+    display: none;
   }
 }
