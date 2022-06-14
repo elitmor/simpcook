@@ -16,7 +16,7 @@ if (localStorage.getItem('ratio')) {
   localStorage.setItem('ratio', 1.375);
 }
 
-function calcTotal() {
+const calcTotal = () => {
   if (!sex || !height || !weight || !age || !ratio) {
     result.textContent = '____';
     return;
@@ -26,11 +26,11 @@ function calcTotal() {
   } else {
     result.textContent = Math.round((88.36 + 13.4 * weight + 4.8 * height - 5.7 * age) * ratio);
   }
-}
+};
 
 calcTotal();
 
-function initLocalSettings(selector, activeClass) {
+const initLocalSettings = (selector, activeClass) => {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach(elem => {
@@ -42,12 +42,12 @@ function initLocalSettings(selector, activeClass) {
       elem.classList.add(activeClass);
     }
   });
-}
+};
 
 initLocalSettings('#gender button', 'calculator__choose-item_active');
 initLocalSettings('.calculator__choose_big button', 'calculator__choose-item_active');
 
-function getStaticInformation(selector, activeClass) {
+const getStaticInformation = (selector, activeClass) => {
   const elements = document.querySelectorAll(selector);
 
   elements.forEach(elem => {
@@ -69,12 +69,12 @@ function getStaticInformation(selector, activeClass) {
       calcTotal();
     });
   });
-}
+};
 
 getStaticInformation('#gender button', 'calculator__choose-item_active');
 getStaticInformation('.calculator__choose_big button', 'calculator__choose-item_active');
 
-function getDynamicInformation(selector) {
+const getDynamicInformation = selector => {
   const input = document.querySelector(selector);
 
   input.addEventListener('input', () => {
@@ -97,7 +97,7 @@ function getDynamicInformation(selector) {
 
     calcTotal();
   });
-}
+};
 
 getDynamicInformation('#height');
 getDynamicInformation('#weight');

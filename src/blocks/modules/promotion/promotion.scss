@@ -1,93 +1,93 @@
 .promotion {
-  margin-bottom: 30px;
+    @include xl {
+        text-align: center;
+    }
 
-  @include xl {
-    text-align: center;
-  }
+    margin-bottom: 30px;
 }
 
 .promotion__title {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .promotion__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+    @include xl {
+        flex-wrap: wrap;
+    }
 
-  @include xl {
-    flex-wrap: wrap;
-  }
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .promotion__info {
-  flex: 0 1 50%;
-  margin-right: 15px;
+    @include xl {
+        flex: 0 1 auto;
+    }
 
-  @include xl {
-    flex: 0 1 auto;
-  }
+    flex: 0 1 50%;
+    margin-right: 15px;
 }
 
 .info-promotion__title {
-  font-size: 28px;
-  color: $black;
-  margin-bottom: 10px;
+    font-size: 28px;
+    color: $black;
+    margin-bottom: 10px;
 }
 
 .info-promotion__text {
-  span {
-    color: $black;
-  }
+    span {
+        color: $black;
+    }
 }
 
 .promotion__timer {
-  flex: 0 1 50%;
+    @include xl {
+        flex: 1 1 auto;
+        margin-top: 20px;
+    }
 
-  @include xl {
-    flex: 1 1 auto;
-    margin-top: 20px;
-  }
+    flex: 0 1 50%;
 }
 
 .timer__header {
-  font-size: 28px;
-  color: $black;
-  margin-bottom: 10px;
+    font-size: 28px;
+    color: $black;
+    margin-bottom: 10px;
 }
 
 .timer__main {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+    @include xl {
+        margin-top: 30px;
+        justify-content: center;
+    }
 
-  @include xl {
-    margin-top: 30px;
-    justify-content: center;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    gap: 30px;
 }
 
 .main-timer__block {
-  width: 100px;
-  height: 100px;
-  background: $white;
-  box-shadow: 0 4px 20px rgb(0 0 0 / 25%);
-  border-radius: 20px;
-  font-size: 16px;
-  text-align: center;
+    @include sm {
+        width: 100%;
+        min-width: 50px;
+        height: 100%;
+    }
 
-  @include sm {
-    width: 100%;
-    height: 100%;
-    min-width: 50px;
-  }
+    width: 100px;
+    height: 100px;
+    background: $white;
+    box-shadow: 0 4px 20px rgb(0 0 0 / 25%);
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
 
-  span {
-    display: block;
-    color: $black;
-    font-size: 30px;
-    margin-top: 25%;
-  }
+    span {
+        display: block;
+        color: $black;
+        font-size: 30px;
+        margin-top: 25%;
+    }
 }
