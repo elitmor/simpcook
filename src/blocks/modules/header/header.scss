@@ -1,148 +1,109 @@
 .header__inner {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 50px;
+  align-items: center;
+  margin: 50px 15px;
+  @include md {
+    margin: 15px 0;
+  }
 }
 
 .header__logo {
   margin-right: 15px;
+}
 
-  svg {
-    fill: #F58D41;
-    width: 150px;
+.menu {
+  @include md {
+    display: grid;
+    margin: 15px 0;
+  }
+}
+.menu__button {
+  @include md {
+    z-index: 1;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
   }
 }
 
-.header__nav {
-  @include sm {
-    background: $white;
-    opacity: 1;
-  }
-}
-
-.nav__list {
-  @include sm {
+.menu__button--open .menu__icon-cross,
+.menu__icon,
+.menu__icon-menu {
+  @include md {
     display: block;
+  }
+}
+.menu__button--open .menu__icon-menu,
+.menu__icon-cross {
+  @include md {
+    display: none;
+  }
+}
+
+.header__menu {
+  @include md {
     width: 100%;
+  }
+}
+
+.menu__list {
+  width: 100vh;
+  font-size: 30px;
+  list-style: none;
+  @include md {
+    width: 100%;
+  }
+}
+
+.menu__list {
+  @include md {
+    display: none;
+    gap: 20px;
+  }
+}
+.menu__list--open {
+  @include md {
+    display: grid;
     text-align: center;
   }
-
-  display: flex;
 }
 
-.nav__item {
-  &:not(:last-child) {
-    @include md {
-      margin-right: 25px;
-    }
-
-    @include sm {
-      margin-right: 0;
-      margin-bottom: 30px;
-    }
-
-    margin-right: 55px;
+.menu__link {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-right: 40px;
+  transition: color 0.3s;
+  @include md {
+    font-size: 1.2rem;
+    margin-right: 0;
+    display: block;
   }
-}
-
-.nav__link {
-  @include sm {
-    width: 100%;
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: $orange;
-  }
-
-  display: inline-block;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-  font-size: 20px;
-  line-height: 30px;
-  color: $black;
-
-
   &:hover {
-    background-position: 0;
-
-    &::before {
-      width: 100%;
-    }
-  }
-
-  &::before {
-    content: "";
-    background: $orange;
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
+    color: #f58d41;
   }
 }
 
-.header__burger {
-  @include sm {
-    display: block;
-  }
-
-  display: none;
-  position: relative;
-  z-index: 10;
-  width: 30px;
-  height: 30px;
-  overflow: hidden;
-  border: none;
-  background: transparent;
-
-  span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 30px;
-    height: 2px;
-    background-color: $orange;
-    transform: translate(-50%, -50%);
-    transition: all 0.6s;
-  }
-}
-
-.header__nav {
-  @include sm {
-    position: absolute;
-    top: 100px;
-    left: 0;
+.header__btn {
+  margin-top: 15px;
+  @include md {
     width: 100%;
-    height: 100%;
-    transform: translateX(-100%);
-    transition: transform 0.3s;
   }
 }
 
-.header__burger span:nth-of-type(2) {
-  top: calc(50% - 5px);
+@media (min-width: 737px) {
+  .menu__button {
+    display: none;
+  }
 }
 
-.header__burger span:nth-of-type(3) {
-  top: calc(50% + 5px);
-}
-
-.header__nav.active {
-  transform: translateX(0);
-}
-
-.header__burger.active span:first-of-type {
-  transform: translateX(100%);
-}
-
-.header__burger.active span:nth-of-type(2) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.header__burger.active span:nth-of-type(3) {
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
+@media (min-width: 737px) {
+  .menu__list {
+    display: grid;
+    grid-auto-flow: column;
+  }
 }

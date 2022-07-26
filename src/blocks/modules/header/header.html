@@ -1,24 +1,42 @@
 <header class="header">
   <div class="header__container">
     <div class="header__inner">
-      <a href="#" class="header__logo logo">
-        <svg>
+      <a href="#" class="header__logo logo" aria-label="logo">
+        <svg width="200px" height="45px">
           <use xlink:href="img/sprites/sprite.svg#logo"></use>
         </svg>
       </a>
-
-      <button class="burger header__burger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button
+        class="menu__button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu__list"
+      >
+        <svg class="menu__icon" aria-hidden="true" width="32" height="32">
+          <use class="menu__icon-menu" href="img/sprites/sprite.svg#menu"></use>
+          <use
+            class="menu__icon-cross"
+            href="img/sprites/sprite.svg#cross"
+          ></use>
+        </svg>
       </button>
-
-      <nav class=" header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Features</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+      <nav class="menu header__menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Home</a>
+          </li>
+          <li class="nav__item menu__item">
+            <a href="#" class="menu__link">About</a>
+          </li>
+          <li class="nav__item menu__item">
+            <a href="#" class="menu__link">Services</a>
+          </li>
+          <li class="nav__item menu__item">
+            <a href="#" class="menu__link">Project</a>
+          </li>
+          <li class="nav__item menu__item">
+            <a href="#" class="menu__link">Testimonials</a>
+          </li>
         </ul>
       </nav>
     </div>

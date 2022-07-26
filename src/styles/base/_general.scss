@@ -22,7 +22,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-[class*="__container"] {
+[class*='__container'] {
   max-width: 1270px;
   margin: 0 auto;
   padding: 0 15px;
@@ -35,4 +35,8 @@ body {
   line-height: calc(57 / 38 * 100%);
   letter-spacing: 0.035em;
   color: $black;
+}
+
+.logo {
+  fill: #f58d41;
 }
