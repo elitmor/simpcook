@@ -40,11 +40,11 @@
 }
 
 .contacts-footer__link_mail {
-  background: url("../img/footer/sms.svg") left no-repeat;
+  background: url('../img/footer/sms.svg') left no-repeat;
 }
 
 .contacts-footer__link_location {
-  background: url("../img/footer/location.svg") left no-repeat;
+  background: url('../img/footer/location.svg') left no-repeat;
 }
 
 .menu-footer {
@@ -101,7 +101,7 @@
     vertical-align: top;
 
     use {
-      transition: all .6s;
+      transition: all 0.6s;
       fill: $white;
 
       &:hover {

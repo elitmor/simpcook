@@ -1,6 +1,6 @@
-const deadline = '2022-09-01';
+const deadline = '2023-09-01';
 
-const getTimeRemaining = endtime => {
+const getTimeRemaining = (endtime) => {
   let days, hours, minutes, seconds;
   const total = Date.parse(endtime) - Date.parse(new Date());
 
@@ -25,7 +25,7 @@ const getTimeRemaining = endtime => {
   };
 };
 
-const getZero = num => {
+const getZero = (num) => {
   if (num >= 0 && num < 10) {
     return `0${num}`;
   } else {
