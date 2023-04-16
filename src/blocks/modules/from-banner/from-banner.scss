@@ -1,127 +1,129 @@
 .from-banner__inner {
-    @include lg {
-        flex-direction: column;
-        margin-top: 20px;
-    }
+  @include lg {
+    flex-direction: column;
+    margin-top: 20px;
+  }
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
 }
 
 .from-banner__info {
-    @include lg {
-        text-align: center;
-        margin-right: 0;
-    }
+  @include lg {
+    text-align: center;
+    margin-right: 0;
+  }
 
-    flex: 0 1 50%;
-    margin-right: 15px;
+  flex: 0 1 50%;
+  margin-right: 15px;
 }
 
 .info-banner__title {
-    @include f600;
+  @include f600;
 
-    @include xl {
-        font-size: 48px;
-    }
+  @include xl {
+    font-size: 48px;
+  }
 
-    @include lg {
-        font-size: 40px;
-        max-width: 100%;
-    }
+  @include lg {
+    font-size: 40px;
+    max-width: 100%;
+  }
 
-    font-size: 54px;
-    line-height: calc(70.2 / 54 * 100%);
-    max-width: 620px;
-    margin-bottom: 30px;
-    color: $black;
+  font-size: 54px;
+  line-height: calc(70.2 / 54 * 100%);
+  max-width: 620px;
+  margin-bottom: 30px;
+  color: $black;
 }
 
 .info-banner__text {
-    @include lg {
-        max-width: 100%;
-    }
+  @include lg {
+    max-width: 100%;
+  }
 
-    font-size: 16px;
-    line-height: calc(24 / 16 * 100%);
-    max-width: 465px;
-    margin-bottom: 30px;
+  font-size: 16px;
+  line-height: calc(24 / 16 * 100%);
+  max-width: 465px;
+  margin-bottom: 30px;
 }
 
 .info-banner__social {
-    margin: 15px;
+  margin: 15px;
 }
 
 .social__items {
-    @include lg {
-        justify-content: center;
-    }
+  @include lg {
+    justify-content: center;
+  }
 
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 50px;
 }
 
 .social__link {
-    position: relative;
+  position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 50%;
-        left: 50%;
-        width: 60px;
-        height: 60px;
-        transform: translate(-50%, -50%);
-        background-color: #f2f2f2;
-        border-radius: 50%;
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    background-color: #f2f2f2;
+    border-radius: 50%;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: $grey;
+    transition: all 0.3s;
+
+    &:hover {
+      fill: $orange;
     }
-
-    svg {
-        width: 30px;
-        height: 30px;
-        fill: $grey;
-        transition: all 0.3s;
-
-        &:hover {
-            fill: $orange;
-        }
-    }
+  }
 }
 
 .info-banner__btn {
-    @include sm {
-        width: 100%;
-    }
+  @include sm {
+    width: 100%;
+  }
 
-    border: none;
-    padding: 10px;
-    padding: 15px 50px;
-    transition: all 0.3s;
-    font-size: 24px;
-    line-height: calc(36 / 24 * 100%);
-    color: $white;
-    background-color: $green;
-    border-radius: 30px;
-    text-align: center;
-    margin-top: 30px;
-    cursor: pointer;
+  border: none;
+  padding: 10px;
+  padding: 15px 50px;
+  transition: all 0.3s;
+  font-size: 24px;
+  line-height: calc(36 / 24 * 100%);
+  color: $white;
+  background-color: $green;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
 
-    &:hover {
-        background-color: $orange;
-    }
+  &:hover {
+    background-color: $orange;
+  }
 }
 
 .from-banner__decor {
-    @include lg {
-        display: none;
-    }
+  @include lg {
+    display: none;
+  }
 
-    flex: 0 1 50%;
+  flex: 0 1 50%;
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 600px;
+    height: 900px;
+    border-radius: 10px;
+  }
 }

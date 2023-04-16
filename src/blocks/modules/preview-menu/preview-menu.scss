@@ -18,12 +18,16 @@
   cursor: pointer;
 
   &:hover {
-    color: $black;
+    color: $orange;
   }
 }
 
+.tabs__item {
+  color: $grey;
+}
+
 .tabs__item_active {
-  color: $orange;
+  color: $black;
 }
 
 .tabs__content {
@@ -49,8 +53,7 @@
 
   position: absolute;
   bottom: 0;
-  width: 1200px;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
   transition: 0.3s all;
   color: $white;

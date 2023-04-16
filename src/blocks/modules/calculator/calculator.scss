@@ -108,3 +108,12 @@
 .calculator__result span {
   font-size: 36px;
 }
+
+.calculator {
+  button,
+  input {
+    &:hover {
+      background-color: $orange;
+    }
+  }
+}

@@ -1,4 +1,7 @@
-<section class="from-banner">
+<section
+  class="from-banner"
+  id="banner"
+>
   <div class="from-banner__container">
     <div class="from-banner__inner">
       <div class="from-banner__info">
@@ -18,7 +21,12 @@
         </div>
         <div class="info-banner__social social">
           <div class="social__items">
-            <a href="https://www.facebook.com" class="social-footer__item">
+            <a
+              class="social__item"
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="link facebook"
+            >
               <svg
                 fill="#fff"
                 width="12"
@@ -31,7 +39,12 @@
                 />
               </svg>
             </a>
-            <a href="https://twitter.com" class="social-footer__item">
+            <a
+              class="social__item"
+              href="https://twitter.com"
+              target="_blank"
+              aria-label="link twitter"
+            >
               <svg
                 fill="#fff"
                 width="20"
@@ -44,7 +57,12 @@
                 />
               </svg>
             </a>
-            <a href="https://www.instagram.com" class="social-footer__item">
+            <a
+              class="social__item"
+              href="https://www.instagram.com"
+              target="_blank"
+              aria-label="link instagram"
+            >
               <svg
                 fill="#fff"
                 width="20"
@@ -63,7 +81,16 @@
       </div>
 
       <div class="from-banner__decor">
-        <img src="img/from-banner/content.jpg" alt="main banner image" />
+        <picture>
+          <source
+            srcset="img/from-banner/content.webp"
+            type="image/webp"
+          />
+          <img
+            src="img/from-banner/content.jpg"
+            alt="main banner image"
+          />
+        </picture>
       </div>
     </div>
   </div>
